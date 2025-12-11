@@ -1,0 +1,21 @@
+use propertyofficedatabase;
+Insert into instrument
+('instrument_type','instrument_section','instrument_barcode','instrument_call_number','instrument_serial_number','instrument_asset_tag','instrument_make','instrument_model','instrument_location','instrument_condition','last_inventory','last_cleaned','instrument_notes')
+values
+('Woodwinds','Oboes',31404007870758,4669,111078,'Oboe 250','Noblet','n/a','Available','Good.Octave key is sticking.',12/11/2024,'','')
+('Woodwinds','Oboes',31404007722637,19321,111060,'Oboe 251','Selmer','Signet','Available','Decent. Low F/E gurgles.',12/11/2024,'','')
+('Woodwinds','Oboes',31404007871590,'N4935',111063,'Oboe 253','Linton','n/a','Available','Decent. Multiple keys are sticking on the top joint.',12/11/2024,'','')
+('Woodwinds','Oboes',31404007728733,5363,111062,'Oboe 254','Marigaux','n/a','Available','Good. Thumb Octave Key sticking. Bell chipped.',12/11/2024,'','')
+('Woodwinds','Oboes',31404007728394,882,118422,'Oboe 255','Laubin','no left F','Available','Good. Missing screw bottom of body joint. No left F.',12/11/2024,'','')
+('Woodwinds','Oboes',31404007870691,7127,'No tag','Oboe 256','Marigaux','SML','Available','Low notes and Bridge notes are hard to speak, octave key sticks',12/11/2024,'','Octave key thumb one is sticking.')
+('Woodwinds','Oboes',31404007871467,118423,19562,'Oboe 257','Selmer','Signet, (no left F)','Available','Fair. Keys are tarnishing. Ring at the bottom of bell is loose.',12/13/2024,'','Needs repair')
+('Woodwinds','Oboes',31404007871970,,11073'?','Oboe 258','Fox',' Model 330','Available','Excellent',12/18/2024,'','')
+('Woodwinds','Oboes',31404007904284,00 6323,102092,'Oboe 260','Yamaha','YOB411','Dr Nelson','Excellent. Repaired Winter 2022.',7/23/2024,'','Not in working order')
+('Woodwinds','Oboes',31404007904342,00 6192,102091,'Oboe 261','Yamaha','YOB411','Available','Needs repair. Top Joint needs recorking. D trill key sticking.',12/11/2024,'','Needs repair ')
+('Woodwinds','Oboes',31404007904409,6194,102221,'Oboe 262','Yamaha','YOB411','Available','Good, cork on top joint needs replacing. Pinned 12/06',12/11/2024,'Yes','Do Not Check Out')
+('Woodwinds','Oboes',31404007722629,4248,122792,'Oboe 263','Yamaha','YOB841','Available','Excellent',12/13/2024,'','')
+('Woodwinds','Oboes',31404007728923,18995,102043,'Oboe 264','Fox',400,'Available','Excellent. Ring at the bottom of bell is loose.',12/16/2024,'','')
+('Woodwinds','Oboes',31404007728444,22477,120237,'Oboe 265','Fox',400,'Cory Hecker','Good.',12/18/2024,'','')
+('Woodwinds','Oboes',31404008395391,'RB88',140429,'Oboe 266','Loree','C+3','Teirza Tippets','Excellent.',12/18/2024,'','')
+('Woodwinds','Oboes',31404009245421,'UM96','No tag','Oboe 253','Loree','C+3 AK','Orihah Pope','Excellent.',6/28/2024,'','')
+('Woodwinds','Oboes',31404010026760,'UM96','No tag','Oboe 253','Loree','n/a','Alison Goodworth','Excellent.',9/16/2024,'','')
