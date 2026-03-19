@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: propertyoffice-db
+    environment:
+      POSTGRES_USER: propoff
+      POSTGRES_PASSWORD: student
+      POSTGRES_DB: propertyoffice
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U propoff"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Cheqroom Webhook Service
+  webhook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cheqroom-webhook
+    environment:
+      API_HOST: 0.0.0.0
+      API_PORT: 8000
+      API_DEBUG: "false"
+      
+      DB_USER: propoff
+      DB_PASSWORD: student
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: propertyoffice
+      DB_SCHEMA: public
+      
+      CHEQROOM_WEBHOOK_SECRET: ${CHEQROOM_WEBHOOK_SECRET:-your_webhook_secret_here}
+      LOG_LEVEL: INFO
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./:/app
+    command: python main.py
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  postgres_data:
+    name: propertyoffice_data
+
+networks:
+  default:
+    name: propertyoffice-network

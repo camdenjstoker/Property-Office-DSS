@@ -110,5 +110,4 @@ print(f'✅ SQL file saved: {os.path.abspath(output_file)}')
 # Show unmatched sheets
 unmatched = set(raw_data.keys()) - processed_sheets
 if unmatched:
-    print(f'⚠️  {len(unmatched)} sheets not matched: {list(unmatched)}')</content>
-<parameter name="filePath">c:\Users\camst\OneDrive - BYU-Idaho\Documents\GitHub\Property-Office-DSS\test_etl.py
+    print(f'⚠️  {len(unmatched)} sheets not matched: {list(unmatched)}')
